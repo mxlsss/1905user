@@ -21,7 +21,7 @@ class LInkController extends Controller
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $regurl);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $json = curl_exec($ch);
         curl_close($ch);
@@ -38,7 +38,7 @@ class LInkController extends Controller
     }
     public function login(){
         $data=request()->except('_token');
-        $logurl='http://1905sunhao.comcto.com/user/login';
+        $logurl='http://1905passport.hcws.vip/login';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $logurl);
         curl_setopt($ch, CURLOPT_POST, 1);
