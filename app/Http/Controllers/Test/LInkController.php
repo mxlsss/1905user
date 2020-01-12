@@ -16,7 +16,7 @@ class LInkController extends Controller
         $data = request()->except('_token');
         dump($data);
 //        $client=new Client;
-        $regurl = 'http://1905passport.com/login/reg';
+        $regurl = 'http://1905passport.hcws.vip/login/reg';
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $regurl);
