@@ -16,20 +16,17 @@ class LInkController extends Controller
         $data = request()->except('_token');
         dump($data);
 //        $client=new Client;
-        $regurl = 'http://1905sunhao.comcto.com/user/reg';
-//        $reg=$client->request('POST',$regurl,[
-//            'headers' => ['Content-Type' => 'application/json'],
-//            'josn'=>$data,
-//        ]);
-//        echo $reg->getBody();
+        $regurl = 'http://1905passport.com/login/reg';
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $regurl);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $json = curl_exec($ch);
         curl_close($ch);
         $arr = json_decode($json, true);
+        dd($arr);
         if($arr['errorcode']=='0000'){
             echo '注册成功';
         }else{

@@ -9,21 +9,8 @@
     @csrf
     <table border="1">
         <tr>
-            <td>名称</td>
-            <td><input type="text" name="name"></td>
-        </tr>
-        <tr>
-            <td>年龄</td>
-            <td><input type="text" name="age"></td>
-        </tr>
-        <tr>
-            <td>性别</td>
-            <td><input type="radio" name="sex"value="1">男&nbsp;<input type="radio" name="sex"value="2">女
-            </td>
-        </tr>
-        <tr>
             <td>电话</td>
-            <td><input type="text" name="mobile"></td>
+            <td><input type="text" name="tel"></td>
         </tr>
         <tr>
             <td>邮箱</td>
@@ -42,7 +29,7 @@
             <td><input type="password" name="passwords"></td>
         </tr>
         <tr>
-            <td>:)</td>
+            <td></td>
             <td><input type="submit" value="提交"></td>
         </tr>
     </table>
