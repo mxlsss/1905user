@@ -14,7 +14,7 @@ class LInkController extends Controller
     public function reg()
     {
         $data = request()->except('_token');
-        dump($data);
+//        dump($data);
 //        $client=new Client;
         $regurl = 'http://1905passport.hcws.vip/login/reg';
 
@@ -26,8 +26,8 @@ class LInkController extends Controller
         $json = curl_exec($ch);
         curl_close($ch);
         $arr = json_decode($json, true);
-        dd($arr);
-        if($arr['errorcode']=='0000'){
+//        dd($arr['msg']);
+        if($arr['errno']=='400000'){
             echo '注册成功';
         }else{
             echo '<script>alert("'.$arr['errmsg'].'"); window.history.go(-1);</script>';
